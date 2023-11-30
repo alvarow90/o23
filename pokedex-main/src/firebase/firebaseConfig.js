@@ -2,13 +2,14 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from "firebase/auth";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCvTM5PCMS0wQjR6YEOtEE3Z3Agzp8k8Q8",
-  authDomain: "pokedex-1835a.firebaseapp.com",
-  projectId: "pokedex-1835a",
-  storageBucket: "pokedex-1835a.appspot.com",
-  messagingSenderId: "74065316858",
-  appId: "1:74065316858:web:b29d4f8e362c41b4fdb243"
+  apiKey: import.meta.VITE_API_KEY,
+  authDomain: import.meta.VITE_AUTH_DOMAIN,
+  projectId: import.meta.VITE_PROJECT_ID,
+  storageBucket: import.meta.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.VITE_APP_ID
 };
 
 
@@ -17,4 +18,4 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 
 
-export  {db,auth};
+export { db, auth };
